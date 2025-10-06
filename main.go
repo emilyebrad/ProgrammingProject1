@@ -279,9 +279,6 @@ func (f firstGame) Draw(screen *ebiten.Image) {
 		playerOps := ebiten.DrawImageOptions{}
 		playerOps.GeoM.Translate(float64(f.xloc), float64(f.yloc))
 		screen.DrawImage(frame, &playerOps)
-		ballOps := ebiten.DrawImageOptions{}
-		ballOps.GeoM.Translate(200, 300) //placeholder position
-		screen.DrawImage(f.ball, &ballOps)
 
 		for _, ball := range f.balls {
 			ops := &ebiten.DrawImageOptions{}
